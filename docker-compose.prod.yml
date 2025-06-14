@@ -1,6 +1,10 @@
 services:
   web:
     build: .
-    ports: ["8001:80"]
+    ports:
+      - "8001:80"
     volumes:
-      - static_volume:/usr/share/nginx/html  # For uploaded files later
+      - static_volume:/usr/share/nginx/html
+
+volumes:
+  static_volume:
